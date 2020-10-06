@@ -1,0 +1,113 @@
+.table {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+
+
+.list {
+    padding-left: 19px;
+
+}
+
+.list:hover {
+    background-color: lightslategray;
+    color: rgb(233, 233, 233);
+}
+
+.listChecked {
+    text-decoration: line-through;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.table-row:hover {
+    background-color: lightslategray;
+    color: rgb(233, 233, 233);
+}
+
+.table-row {
+
+    text-decoration: none;
+}
+
+.table-row-checked {
+    text-decoration: line-through;
+}
+
+.listChecked:before {
+    content: '✓';
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 8px;
+}
+
+.add {
+    margin: 0px 10px 0px 10px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px rgba(36, 36, 36, 0.562),
+        -2px -2px 7px rgba(161, 161, 161, 0.452);
+    border-radius: 20px;
+    background-color: rgb(62, 74, 85);
+    color: rgb(233, 233, 233);
+
+
+
+}
+
+.add:hover {
+    background-color: lightslategray;
+    color: rgb(233, 233, 233);
+}
+
+nav {
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+}
+
+.checklist {
+    box-shadow: 7px 7px 16px rgba(36, 36, 36, 0.562),
+        -7px -7px 16px rgba(161, 161, 161, 0.452);
+    border-radius: 20px;
+    padding-top: 20px;
+    min-width: 390px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .head {
+        display: none
+    }
+}
+
+.input {
+    max-width: 100%;
+}
+
+.date {
+    width: 100px;
+}
+
+.input-date {
+    border: none;
+
+    margin-left: auto;
+    width: 50%;
+}
+
+.input-date::-webkit-calendar-picker-indicator {
+    margin: 0;
+}
