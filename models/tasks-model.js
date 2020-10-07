@@ -11,3 +11,12 @@ exports.updateTasks = (task_id, completed) => {
     .where({ task_id })
     .returning('*');
 };
+
+exports.insertTask = (body) => {
+  return knex('tasks').insert(body).into('tasks');
+};
+
+exports.removeTask = (task_id) => {
+  console.log(task_id);
+  return knex('tasks').delete('*').where({ task_id });
+};

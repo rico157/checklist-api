@@ -1,4 +1,9 @@
-const { selectTasks, updateTasks } = require('../models/tasks-model.js');
+const {
+  selectTasks,
+  updateTasks,
+  insertTask,
+  removeTask
+} = require('../models/tasks-model.js');
 
 exports.getTasks = (req, res, next) => {
   selectTasks()
@@ -12,4 +17,20 @@ exports.patchTasks = (req, res, next) => {
   updateTasks(task_id, completed)
     .then((task) => res.status(200).send({ task }))
     .catch(next);
+};
+
+exports.postTask = (req, res, next) => {
+  insertTask(req.body)
+    .then((task) => {
+      res.status(201).send({ task });
+    })
+    .catch(next);
+};
+
+exports.deleteTask = (req, res, next) => {
+  const { task_id } = req.params;
+
+  removeTask(task_id).then(() => {
+    res.sendStatus(205);
+  });
 };

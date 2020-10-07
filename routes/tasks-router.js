@@ -1,7 +1,12 @@
 const tasksRouter = require('express').Router();
-const { getTasks, patchTasks } = require('../controllers/tasks-controller.js');
+const {
+  getTasks,
+  patchTasks,
+  postTask,
+  deleteTask
+} = require('../controllers/tasks-controller.js');
 
-tasksRouter.route('/').get(getTasks);
-tasksRouter.route('/:task_id').patch(patchTasks);
+tasksRouter.route('/').get(getTasks).post(postTask);
+tasksRouter.route('/:task_id').patch(patchTasks).delete(deleteTask);
 
 module.exports = tasksRouter;

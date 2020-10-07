@@ -6,19 +6,6 @@
 
 
 
-.list {
-    padding-left: 19px;
-
-}
-
-.list:hover {
-    background-color: lightslategray;
-    color: rgb(233, 233, 233);
-}
-
-.listChecked {
-    text-decoration: line-through;
-}
 
 th {
     text-align: center;
@@ -29,25 +16,40 @@ td {
 }
 
 .table-row:hover {
-    background-color: lightslategray;
+    background: linear-gradient(to right,
+            white 5%, lightslategray 30%, white 75%);
     color: rgb(233, 233, 233);
 }
+
+
 
 .table-row {
 
     text-decoration: none;
+    border-radius: 20px;
+
 }
 
 .table-row-checked {
+    border-radius: 20px;
+
+}
+
+.table-row-checked .task {
     text-decoration: line-through;
 }
 
-.listChecked:before {
-    content: '✓';
-    display: inline-block;
-    text-decoration: none;
-    padding-right: 8px;
+
+
+.table-row-checked:hover {
+    background: linear-gradient(to right,
+            white 5%, lightslategray 30%, white 75%);
+    color: rgb(233, 233, 233);
+    border-radius: 30px;
+
 }
+
+
 
 .add {
     margin: 0px 10px 0px 10px;
@@ -56,7 +58,7 @@ td {
     box-shadow: 2px 2px 7px rgba(36, 36, 36, 0.562),
         -2px -2px 7px rgba(161, 161, 161, 0.452);
     border-radius: 20px;
-    background-color: rgb(62, 74, 85);
+    background-color: rgb(35, 171, 64);
     color: rgb(233, 233, 233);
 
 
@@ -64,6 +66,26 @@ td {
 }
 
 .add:hover {
+    background-color: lightslategray;
+    color: rgb(233, 233, 233);
+
+}
+
+.remove {
+    margin: 0px 10px 0px 10px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px rgba(36, 36, 36, 0.562),
+        -2px -2px 7px rgba(161, 161, 161, 0.452);
+    border-radius: 20px;
+    background-color: rgb(167, 33, 33);
+    color: rgb(233, 233, 233);
+
+
+
+}
+
+.remove:hover {
     background-color: lightslategray;
     color: rgb(233, 233, 233);
 }
@@ -79,7 +101,7 @@ nav {
     box-shadow: 7px 7px 16px rgba(36, 36, 36, 0.562),
         -7px -7px 16px rgba(161, 161, 161, 0.452);
     border-radius: 20px;
-    padding-top: 20px;
+    padding: 5em;
     min-width: 390px;
     display: flex;
     flex-direction: column;
@@ -87,27 +109,100 @@ nav {
 
 
 
-@media screen and (max-width: 1000px) {
-    .head {
-        display: none
-    }
-}
+
 
 .input {
-    max-width: 100%;
+    min-width: 50%;
 }
 
 .date {
     width: 100px;
 }
 
+
+
 .input-date {
     border: none;
 
     margin-left: auto;
-    width: 50%;
+
 }
 
 .input-date::-webkit-calendar-picker-indicator {
     margin: 0;
+}
+
+table {
+    cursor: pointer;
+
+    transition: 2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.buttons {
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.deleting {
+    background: linear-gradient(to right,
+            white 5%, red 30%, white 75%);
+    color: rgb(233, 233, 233) !important
+}
+
+.deleted {
+    background-color: rgb(193, 66, 66);
+
+    opacity: 0.5;
+}
+
+.delete-button {
+    margin: 0px 10px 0px 10px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px rgba(36, 36, 36, 0.562),
+        -2px -2px 7px rgba(161, 161, 161, 0.452);
+    border-radius: 30px;
+    background-color: rgb(167, 33, 33);
+    color: rgb(233, 233, 233);
+    text-align: left;
+    text-decoration: none;
+
+}
+
+.delete-button:hover {
+    background-color: rgb(184, 97, 97);
+
+}
+
+.task {
+    min-width: 20em;
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .checklist {
+        padding: 1em;
+        min-width: 280px;
+    }
+
+    .check {
+        max-width: 10px;
+    }
+
+
+    .task {
+        min-width: 70px;
+    }
 }
