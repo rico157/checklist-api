@@ -1,7 +1,6 @@
 # Checklist API Mini-App
-## 🚧 Work in progress 🚧
 
-### What's working so far:
+### What's working:
 - [x] Homepage with the pre-seeded tasks 
 **GET** request on page load
 
@@ -9,11 +8,9 @@
 - [x] Mark tasks to do/done 
 **PATCH** request when clicked on a task
 
-### TO DO list:
+- [x] Add a new task to the database **POST** request when a new task is added
 
-- [ ] Add a new task to the database **POST** request when a new task is added
-
-- [ ] Delete a task from the database **DELETE** request when a new task is deleted
+- [x] Delete a task from the database **DELETE** request when a new task is deleted
 
 ---
 
@@ -28,17 +25,31 @@ GET /api/tasks
 ```http
 PATCH /api/tasks/:task_id
 ```
-#### With a body of:
+##### With a body like:
 ```json
 {
   "completed": "true"
 }
 ```
+* #### Delete a post
+```http
+DELETE /api/tasks/:task_id
+```
+---
+* #### Add a new task
+```http
+POST /api/tasks/
+```
+##### With a body like:
+```json
+{
+  "task": "task message",   
+  "completed": "false",
+  "dueBy": "YYYY-MM-DD"
+}
+```
 
 ---
-## What is it?
-
-A simple checklist full stack app 
 
 ### Tech Stack
 
