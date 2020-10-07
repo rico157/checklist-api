@@ -31,7 +31,8 @@ PATCH /api/tasks/:task_id
   "completed": "true"
 }
 ```
-* #### Delete a post
+---
+* #### Delete a task
 ```http
 DELETE /api/tasks/:task_id
 ```
@@ -77,25 +78,35 @@ POST /api/tasks/
 ## How to install
 
 * Clone the repository
+
+```
+$ git clone https://github.com/rico157/checklist-api.git
+```
+
 * Install all the node packages with the command:
+
 ```
 $ npm i
 ```
 
 * Create/recreate the database with the command:
+
 ```
 $ npm run setup-dbs
 ```
 
 * Insert data to the database with the command:
+
 ```
 $ npm run seed
 ```
 
 * Start the server with the command:
+
 ```
 $ npm start
 ```
+
 * Go to [http://localhost:9090/](http://localhost:9090/index.html)
 
 
