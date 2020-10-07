@@ -1,4 +1,4 @@
-# Checklist Full Stack Mini-App
+# Checklist API Mini-App
 ## 🚧 Work in progress 🚧
 
 ### What's working so far:
@@ -17,6 +17,25 @@
 
 ---
 
+## Endpoints available
+---
+* #### Get all tasks
+```http
+GET /api/tasks
+```
+---
+* #### Update the *completed* property
+```http
+PATCH /api/tasks/:task_id
+```
+#### With a body of:
+```json
+{
+  "completed": "true"
+}
+```
+
+---
 ## What is it?
 
 A simple checklist full stack app 
@@ -78,4 +97,4 @@ $ npm test ---> run the test suite
 $ npm run migrate-make my-new-table-name ---> create a new migration table
 $ npm run migrate-latest ---> go to the latest migration
 $ npm run migrate-rollback ---> go to the first migration
----
+```
