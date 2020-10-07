@@ -13,7 +13,7 @@
 - [x] Delete a task from the database **DELETE** request when a new task is deleted
 
 ---
-
+![Screenshot](https://github.com/rico157/checklist-api/blob/master/screenshot/homepage-screenshot.png)
 ## Endpoints available
 ---
 * #### Get all tasks
@@ -108,4 +108,8 @@ $ npm test ---> run the test suite
 $ npm run migrate-make my-new-table-name ---> create a new migration table
 $ npm run migrate-latest ---> go to the latest migration
 $ npm run migrate-rollback ---> go to the first migration
+
 ```
+## Similar Project:
+[Checklist Mini-App Challange](https://github.com/rico157/checklist-challenge)
+
