@@ -12,6 +12,8 @@
 
 - [x] Delete a task from the database **DELETE** request when a new task is deleted
 
+- [x] Sort by table headers (*Done*, *Tasks*, *Date*) **ascending** or **descending**.
+
 ---
 ![Screenshot](https://github.com/rico157/checklist-api/blob/master/screenshot/homepage-screenshot.png)
 ## Endpoints available
