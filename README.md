@@ -1,8 +1,8 @@
 # Checklist API Mini-App
 
-### What's working:
+### Features:
 - [x] Homepage with the pre-seeded tasks 
-**GET** request on page load
+**GET** request when page loads
 
 
 - [x] Mark tasks to do/done 
@@ -124,5 +124,5 @@ $ npm run migrate-rollback ---> go to the first migration
 
 ```
 ## Similar Project:
-[Checklist Mini-App Challange](https://github.com/rico157/checklist-challenge)
-
+**HTML, CSS, JS:** [Checklist Mini-App Challange](https://github.com/rico157/checklist-challenge)
+**REST API:** [Fake-News API](https://github.com/rico157/rico-fake-news-api)
